@@ -132,7 +132,6 @@ class Theme extends Collection
             if (! file_exists(public_path('themes'))) {
                 app()->make('files')->makeDirectory(public_path('themes'));
             }
-
             app()->make('files')->link(
                 $this->path('public'), public_path('themes')
             );
